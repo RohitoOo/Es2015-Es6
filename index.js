@@ -59,3 +59,66 @@ var bros = ['Rohito' , 'Sanju' , 'Lavish']
 var parents = ['Martin' , 'Reshma']
 
 console.log(...bros, ...parents)
+
+
+// Set Method
+
+
+var array = [1,2,3,4,5,6]
+
+console.log(array)
+
+newArray = new Set(array)
+
+newArray.add(7)
+
+newArray.delete(1)
+
+newArray.add({a: 1 , b : 2})
+
+console.log(newArray)
+
+
+
+// MAP
+
+
+let myMap = new Map([ ['a1','Hello'], ['b2' , 'GoodBye'] ])
+
+console.log(myMap)
+
+myMap.set('b3', 'Foo')
+
+console.log(myMap)
+
+//  Map(3) {"a1" => "Hello", "b2" => "GoodBye", "b3" => "Foo"}
+
+let carWeakSet = new WeakSet();
+
+let car1 = {
+  make : 'Honda',
+  model : 'Accord'
+}
+
+carWeakSet.add(car1)
+
+let car2 = {
+  make : 'Mercedes',
+  model : 'S Class'
+}
+
+carWeakSet.add(car2)
+
+console.log(carWeakSet)
+
+
+// 0
+// :
+// value
+// :
+// {make: "Honda", model: "Accord"}
+// 1
+// :
+// value
+// :
+// {make: "Mercedes", model: "S Class"}
