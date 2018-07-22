@@ -23,12 +23,19 @@ return  word.toUpperCase();
 //Number features Added in ES6
 
 //Hexadicmal
-console.log(0xff)
+console.log(0xff)  //255
+
 
 // Binary ( NEW )
-console.log(0b101011)
+console.log(0b101011)  //43
 
 //Octol
-console.log(0o543)
+console.log(0o543) //355
 
-console.log()
+// Number Methods
+// isNeteger
+
+console.log(Number.isInteger(NaN)) //False
+console.log(Number.isInteger(2)) // True
+console.log(Number.isFinite(NaN)) // false
+console.log(Number.isFinite(-2))  //true
