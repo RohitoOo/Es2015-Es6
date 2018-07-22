@@ -39,3 +39,23 @@ console.log(Number.isInteger(NaN)) //False
 console.log(Number.isInteger(2)) // True
 console.log(Number.isFinite(NaN)) // false
 console.log(Number.isFinite(-2))  //true
+
+
+
+// Default Params
+
+
+function greeting($greeting = "Default : Hello!") {
+  console.log($greeting)
+}
+
+greeting();
+
+
+
+// Spread Operator
+
+var bros = ['Rohito' , 'Sanju' , 'Lavish']
+var parents = ['Martin' , 'Reshma']
+
+console.log(...bros, ...parents)
