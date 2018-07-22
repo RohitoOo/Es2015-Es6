@@ -5,16 +5,27 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var User = function () {
-  function User() {
+  function User(username, email, password) {
     _classCallCheck(this, User);
+
+    this.username = username;
+    this.email = email;
+    this.password = password;
   }
 
   _createClass(User, [{
     key: "register",
     value: function register() {
-      console.log("Registered Successfully!");
+      console.log(this.username + " is now registered ");
     }
   }]);
 
   return User;
 }();
+
+// Registration
+
+
+var bob = new User("Rohito", "rohito@gmail.com", "password");
+
+bob.register();
