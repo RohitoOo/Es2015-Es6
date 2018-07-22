@@ -1,31 +1,57 @@
 "use strict";
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var User = function () {
-  function User(username, email, password) {
-    _classCallCheck(this, User);
-
-    this.username = username;
-    this.email = email;
-    this.password = password;
-  }
-
-  _createClass(User, [{
-    key: "register",
-    value: function register() {
-      console.log(this.username + " is now registered ");
-    }
-  }]);
-
-  return User;
-}();
+//
+// class User {
+//   constructor(username, email, password){
+//
+// this.username = username;
+// this.email = email;
+// this.password = password;
+//
+//   }
+//
+//
+// // Static Function/Method
+//
+// static countUsers() {
+//   console.log("There are 50 users")
+// }
+//
+//   register(){
+//   console.log(this.username + " is now registered ")
+//   }
+//
+//
+// }
 
 // Registration
+//
+// let bob = new User("Rohito", "rohito@gmail.com" , "password")
+//
+// bob.register()
+
+// Static Method
+// User.countUsers
+
+//
+// class Member extends User {
+//   constructor(username, email, password, memberPackage){
+//   super(username,email,password);
+//     this.package = memberPackage;
+//   }
+//
+// getPackage(){
+// console.log( this.username + " is subscribed to the " + this.package)
+// }
+//
+// }
+//
+// let rohito = new Member('Rohito', 'rohito@gmail.com' , 'password' , 'Executive Package')
+//
+// // rohito.getPackage()
+//
+// rohito.register()
 
 
-var bob = new User("Rohito", "rohito@gmail.com", "password");
+var template = "<h1>This is JavaScript!!</h1><p> Literal Templates Work Beautifully </p>";
 
-bob.register();
+document.getElementById('template').innerHtml = template;

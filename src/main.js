@@ -1,27 +1,27 @@
 "use strict"
-
-class User {
-  constructor(username, email, password){
-
-this.username = username;
-this.email = email;
-this.password = password;
-
-  }
-
-
-// Static Function/Method
-
-static countUsers() {
-  console.log("There are 50 users")
-}
-
-  register(){
-  console.log(this.username + " is now registered ")
-  }
-
-
-}
+//
+// class User {
+//   constructor(username, email, password){
+//
+// this.username = username;
+// this.email = email;
+// this.password = password;
+//
+//   }
+//
+//
+// // Static Function/Method
+//
+// static countUsers() {
+//   console.log("There are 50 users")
+// }
+//
+//   register(){
+//   console.log(this.username + " is now registered ")
+//   }
+//
+//
+// }
 
 // Registration
 //
@@ -32,19 +32,31 @@ static countUsers() {
 // Static Method
 // User.countUsers
 
+//
+// class Member extends User {
+//   constructor(username, email, password, memberPackage){
+//   super(username,email,password);
+//     this.package = memberPackage;
+//   }
+//
+// getPackage(){
+// console.log( this.username + " is subscribed to the " + this.package)
+// }
+//
+// }
+//
+// let rohito = new Member('Rohito', 'rohito@gmail.com' , 'password' , 'Executive Package')
+//
+// // rohito.getPackage()
+//
+// rohito.register()
 
-class Member extends User {
-  constructor(username, email, password, memberPackage){
-  super(username,email,password);
-    this.package = memberPackage;
-  }
 
-getPackage(){
-console.log( this.username + " is subscribed to the " + this.package)
-}
 
-}
 
-let rohito = new Member('Rohito', 'rohito@gmail.com' , 'password' , 'Executive Package')
 
-rohito.getPackage()
+
+let template = `<h1>This is JavaScript!!</h1><p> Literal Templates Work Beautifully </p>`
+
+
+document.getElementById('template').innerHtml = template
