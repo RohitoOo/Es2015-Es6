@@ -52,11 +52,13 @@
 // rohito.register()
 
 
-var num = 1 
+var num = 1
+
+var test = "gulp"
 
 
-
-let template = `<h1>This is JavaScript!!</h1><p> Literal Templates Work Beautifully </p>`
-
-
-document.getElementById('template').innerHtml = template
+//
+// let template = `<h1>This is JavaScript!!</h1><p> Literal Templates Work Beautifully </p>`
+//
+//
+// document.getElementById('template').innerHtml = template
