@@ -8,7 +8,15 @@ let myPromise = new Promise(  (resolve, reject) => {
 })
 
 let myPromise1 = new Promise(  (resolve, reject) => {
-  resolve( "Resolved Second Promise!")
+
+  setTimeout( () => {
+    resolve('Good To Go')
+  }, 1000)
+
+
+  setTimeout( () => {
+    reject('Hahhahahaha')
+  }, 200)
 })
 
 // myPromise.then( (msg) => {
@@ -20,8 +28,15 @@ let myPromise1 = new Promise(  (resolve, reject) => {
 // })
 
 
+
+
 Promise.all([myPromise, myPromise1])
+
+// Only goes here if all the promises return resolve !!
 
 .then( (data) => {
   console.log(data)
+})
+.catch( (msg) => {
+  console.log(msg)
 })

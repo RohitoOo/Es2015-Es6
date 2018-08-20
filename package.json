@@ -11,6 +11,8 @@
     "gulp": "^3.9.1"
   },
   "dependencies": {
-    "gulp-babel": "^7.0.1"
+    "es6-promise": "^4.2.4",
+    "gulp-babel": "^7.0.1",
+    "isomorphic-fetch": "^2.2.1"
   }
 }
