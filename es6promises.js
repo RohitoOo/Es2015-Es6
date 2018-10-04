@@ -56,32 +56,63 @@ function createPost(post){
                 // Custom Error Message Creation 
                 reject("Error: You messed it up boy!")
             }
-        }, 3000 )
+        }, 2000 )
     } ) 
 
 }
 
 
 
-createPost({title: "Post 100", body: "This is post 100"})
-.then(getPosts)
-.catch(err => console.log(err))
+// 
+// .then(getPosts)
+// .catch(err => console.log(err))
 
 
-//Promise ALL
+// Async Await 
 
-const promise1 = Promise.resolve("Dummy Text From Promise1")
-const promise2 = 2;
-const promise3 = new Promise( (resolve, reject) => 
-    setTimeout( resolve, 2000, "promise3 Executed!") 
-)
-// fetch from an API --> return a promise
+async function init(){
+   
+    // Wait for Post To get Created ---> Then Call the below function getPosts()
+    await createPost({title: "Post 100", body: "This is post 100"})
+
+   getPosts();
+
+}
+
+init();
+
+// //Promise ALL
+
+// const promise1 = Promise.resolve("Dummy Text From Promise1")
+// const promise2 = 2;
+// const promise3 = new Promise( (resolve, reject) => 
+//     setTimeout( resolve, 2000, "promise3 Executed!") 
+// )
+// // fetch from an API --> return a promise
 
 
 
-const promise4 = fetch('http://api.icndb.com/jokes/random').then(res => res.json())
+// const promise4 = fetch('http://api.icndb.com/jokes/random').then(res => res.json())
 
-Promise.all([promise1,promise2,promise3, promise4]).then( result =>
-    console.log(result, "Chuck Norris Joke : ", result[3].value.joke)
+// Promise.all([promise1,promise2,promise3, promise4]).then( result =>
+//     console.log(result, "Chuck Norris Joke : ", result[3].value.joke)
     
-)
+// )
+
+
+
+// async await fetch 
+
+async function getJoke() {
+    await fetch('http://api.icndb.com/jokes/random')
+
+    .then(res => res.json())
+
+    .then( data => {
+      document.body.innerHTML =  `<h2>${data.value.joke}</h2>`
+    })
+}
+
+setInterval( ()=> {
+getJoke()
+}, 3000)
