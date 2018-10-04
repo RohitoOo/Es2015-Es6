@@ -1,13 +1,15 @@
 
 'use strict'
 
-fetch('http://api.icndb.com/jokes/random')
+const axios = require('axios')
+
+axios.get('http://api.icndb.com/jokes/random')
 
 .then( (data) => {
-
-data.json().then( (joke) => {
-  console.log(joke.value.joke)
-})
+console.log(data.data.value.joke)
+// data.json().then( (joke) => {
+//   console.log(joke.value.joke)
+// })
 
 })
 
