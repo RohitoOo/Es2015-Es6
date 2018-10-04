@@ -1,3 +1,6 @@
+// const axios = require('axios')
+
+
 const posts = [
     {title: "Post 1", body: "This is post 1"},
     {title: "Post 2", body: "This is post 2"},
@@ -7,6 +10,8 @@ const posts = [
     {title: "Post 6", body: "This is post 6"},
     {title: "Post 7", body: "This is post 7"},
 ]
+
+
 
 function getPosts(){
 
@@ -63,3 +68,20 @@ createPost({title: "Post 100", body: "This is post 100"})
 .catch(err => console.log(err))
 
 
+//Promise ALL
+
+const promise1 = Promise.resolve("Dummy Text From Promise1")
+const promise2 = 2;
+const promise3 = new Promise( (resolve, reject) => 
+    setTimeout( resolve, 2000, "promise3 Executed!") 
+)
+// fetch from an API --> return a promise
+
+
+
+const promise4 = fetch('http://api.icndb.com/jokes/random').then(res => res.json())
+
+Promise.all([promise1,promise2,promise3, promise4]).then( result =>
+    console.log(result, "Chuck Norris Joke : ", result[3].value.joke)
+    
+)
